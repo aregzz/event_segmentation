@@ -30,6 +30,7 @@ if __name__ == '__main__':
     alpha_0 = 1.0
     beta_0 = 1.0
     l = 200.0    # hazard function parameter (l > 1)
+    # np.random.seed(3219)    # set the seed for the random generator
 
     # generate some data according to the model
     for i, _ in enumerate(x):
@@ -56,10 +57,10 @@ if __name__ == '__main__':
     map_p_r = np.empty(shape=(n, ))    # allocate memory to store the MAP estimate of p(r_t|x_{1:t})
 
     # BOCPD initialization
-    Tk_n = k_n = np.array([k_0])
-    Talpha_n = alpha_n = np.array([alpha_0])
-    Tmu_n = mu_n = np.array([mu_0])
-    Tbeta_n = beta_n = np.array([beta_0])
+    k_n = np.array([k_0])
+    alpha_n = np.array([alpha_0])
+    mu_n = np.array([mu_0])
+    beta_n = np.array([beta_0])
     x_sum = np.array([0.0])
     x2_sum = np.array([0.0])
     p_r_x = np.array([1.0])    # p(r_t, x_{1:t}), t = 0 := p(r_0 = 0) = 1
