@@ -1,0 +1,5 @@
+# --- swape files --- #
+*.swp
+
+# --- others --- #
+**/.ropeproject/
